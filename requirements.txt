@@ -1,1 +1,1 @@
-sudo apt install python3-flask
+Flask==2.3.4

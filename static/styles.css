@@ -1,0 +1,64 @@
+/* Stili generali */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Titolo */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+}
+
+/* Bottone */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Messaggio risultato */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Layout del form */
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestione Frasi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Inserisci una frase</h1>
+    <form method="POST">
+        <input type="text" name="phrase" placeholder="Scrivi qui...">
+        <button type="submit">Invia</button>
+    </form>
+
+    <h2>Frasi salvate:</h2>
+    {% if phrases %}
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>ID</th>
+            <th>Frase</th>
+            <th>Azioni</th>
+        </tr>
+        {% for id, phrase in phrases %}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ phrase }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('delete_phrase', phrase_id=id) }}">
+                    <button type="submit">Cancella</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>Nessuna frase inserita.</p>
+    {% endif %}
+</body>
+</html>
+
+
